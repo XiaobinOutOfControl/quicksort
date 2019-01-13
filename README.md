@@ -1,2 +1,2 @@
 # quicksorts
-different implementations of quicksort
+Generic implementation of quicksort
