@@ -19,23 +19,17 @@ public class QuickSort {
         T pivot = array[pivotIdx];
         swap(array, pivotIdx, ub);
         int left = lb, right = ub;
+        int leftDiff, rightDiff;
         while (left <= right) {
-            int leftDiff = c == null? 
-                            ((Comparable<T>) array[left]).compareTo(pivot)
-                                : c.compare(array[left], pivot);
-            if (leftDiff < 0) {
-                ++left;
-                continue;
-            }
-            if (left > right) break;
-            int rightDiff = c == null?
-                        ((Comparable<T>) array[right]).compareTo(pivot)
-                            : c.compare(array[right], pivot);
-            if (rightDiff >= 0) {
-                --right;
-                continue;
-            }
-            swap(array, left++, right--);
+            while (left <= right && (leftDiff = c == null?
+                    ((Comparable<T>) array[left]).compareTo(pivot)
+                    : c.compare(array[left], pivot)) < 0) ++left;
+
+            while (left <= right && (rightDiff = c == null?
+                    ((Comparable<T>) array[right]).compareTo(pivot)
+                    : c.compare(array[right], pivot)) >= 0) --right;
+
+            if (left < right) swap(array, left++, right--);
         }
         swap(array, left, ub);
         quickSort(array, lb, left - 1, c);

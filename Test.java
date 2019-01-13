@@ -33,7 +33,7 @@ public class Test {
         //     System.out.println();
         // }
 
-        Test[] t = new Test[]{};
+        Test[] t = new Test[]{new Test("c"), new Test("a"), new Test("b")};
         System.out.println(Arrays.toString(t));
         QuickSort.sortArray(t, new TestComp());
         System.out.println(Arrays.toString(t));
