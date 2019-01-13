@@ -21,22 +21,22 @@ public class Test {
 
 
     public static void main(String[] args) {
-        // Random r = new Random();
-        // for (int i = 0; i < 6; ++i) {
-        //     Integer[] nums = new Integer[i];
-        //     for (int j = 0; j < i; ++j) {
-        //         nums[j] = r.nextInt(10);
-        //     }
-        //     System.out.println(Arrays.toString(nums));
-        //     QuickSort.sortArray(nums);
-        //     System.out.println(Arrays.toString(nums));
-        //     System.out.println();
-        // }
+        Random r = new Random();
+        for (int i = 0; i < 6; ++i) {
+            Integer[] nums = new Integer[i];
+            for (int j = 0; j < i; ++j) {
+                nums[j] = r.nextInt(10);
+            }
+            System.out.println(Arrays.toString(nums));
+            QuickSort.sortArray(nums);
+            System.out.println(Arrays.toString(nums));
+            System.out.println();
+        }
 
-        Test[] t = new Test[]{new Test("c"), new Test("a"), new Test("b")};
-        System.out.println(Arrays.toString(t));
-        QuickSort.sortArray(t, new TestComp());
-        System.out.println(Arrays.toString(t));
+        // Test[] t = new Test[]{new Test("c"), new Test("a"), new Test("b")};
+        // System.out.println(Arrays.toString(t));
+        // QuickSort.sortArray(t, new TestComp());
+        // System.out.println(Arrays.toString(t));
 
 
         // Integer[] nums = new Integer[]{6,6,6,6,6,6};

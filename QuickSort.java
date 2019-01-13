@@ -19,13 +19,12 @@ public class QuickSort {
         T pivot = array[pivotIdx];
         swap(array, pivotIdx, ub);
         int left = lb, right = ub;
-        int leftDiff, rightDiff;
         while (left <= right) {
-            while (left <= right && (leftDiff = c == null?
+            while (left <= right && (c == null?
                     ((Comparable<T>) array[left]).compareTo(pivot)
                     : c.compare(array[left], pivot)) < 0) ++left;
 
-            while (left <= right && (rightDiff = c == null?
+            while (left <= right && (c == null?
                     ((Comparable<T>) array[right]).compareTo(pivot)
                     : c.compare(array[right], pivot)) >= 0) --right;
 
