@@ -4,7 +4,7 @@ import java.util.Random;
 public class QuickSort {
     private static Random r = new Random();
 
-    public static <T> void sortArray(T[] array) {
+    public static <T extends Comparable<T>> void sortArray(T[] array) {
         sortArray(array, null);
     }
 
